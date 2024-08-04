@@ -1,18 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/27 14:18:55 by marvin            #+#    #+#             */
-/*   Updated: 2024/07/27 14:18:55 by marvin           ###   ########.fr       */
+/*   Created: 2024/08/04 18:31:59 by marvin            #+#    #+#             */
+/*   Updated: 2024/08/04 18:31:59 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
-void ft_putchar(char c)
+int	ft_printf(const char *str, ...)
 {
-    return (write(1, c, 1));
+	int		i;
+	int		count;
+	va_list	args;
+
+	va_start (args, str);
+	i = 0;
+	count = 0;
+	while (str[i])
+	{
+		if (str[i] == '%')
+		{
+			i++;
+			count += ft_check_type(str[i], args);
+		}
+		else
+			count += ft_put_c(str[i]);
+		i++;
+	}
+	va_end (args);
+	if (count < 0)
+		return (-1);
+	return (count);
 }
