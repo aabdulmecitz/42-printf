@@ -3,39 +3,43 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: kali <kali@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/27 19:39:29 by marvin            #+#    #+#              #
-#    Updated: 2024/07/27 19:39:29 by marvin           ###   ########.fr        #
+#    Updated: 2024/08/05 09:20:26 by kali             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=	$(shell find . -name ft_*.c)
+SRCS = $(shell find . -name ft_*.c)
 
-OBJS	=	(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
-NAME	=	libftprintf.a
+SRCS = $(shell find . -name 'ft_*.c')
+OBJS = $(SRCS:.c=.o)
+NAME = libftprintf.a
 
-FLAGS	= -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 CC = gcc
 RM = rm -f
 
-all:	${NAME}
+all: $(NAME)
 
+# Derleme kuralı
 %.o: %.c
-		$(CC) $(FLAGS) -o $@ -c $?
+	$(CC) $(FLAGS) -c $< -o $@
 
-${NAME}:	${OBJS}
-					ar rcs ${NAME} ${OBJS}
+# Arşivleme kuralı
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
+# Temizlik kuralı
 clean:
-					${RM} ${OBJS}
+	$(RM) $(OBJS)
 
-fclean:		clean
-					${RM} ${NAME}
+# Temizleme ve yeniden kurulum kuralı
+fclean: clean
+	$(RM) $(NAME)
 
-re:					fclean all
-
-
-
+# Yeniden kurulum kuralı
+re: fclean all
