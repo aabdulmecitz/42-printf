@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_put_s.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/27 14:19:00 by marvin            #+#    #+#             */
-/*   Updated: 2024/07/27 14:19:00 by marvin           ###   ########.fr       */
+/*   Created: 2024/08/05 20:23:01 by kali              #+#    #+#             */
+/*   Updated: 2024/08/05 20:33:58 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
-void ft_putstr(char *str) 
-{
-    if (*str)
-		return (write(1, "(null)", 6));
-    
+int	ft_put_s(char *str)
+{   
+    int i;
     int count;
-
+    
+    i = 0;
     count = 0;
-    while (str[count])
-	{
-		write (1, &str[count], 1);
-		count++;
-	}
-	if (count < 0)
-		return (-1);
+    while (str[i])
+    {
+        count += ft_put_c(str[i]);
+        i++;
+    }
+    return (count);
 }

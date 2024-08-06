@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_put_c.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/27 14:18:55 by marvin            #+#    #+#             */
-/*   Updated: 2024/07/27 14:18:55 by marvin           ###   ########.fr       */
+/*   Created: 2024/08/05 20:20:17 by kali              #+#    #+#             */
+/*   Updated: 2024/08/05 20:21:53 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
-void ft_putchar(char c)
+int	ft_put_c(char c)
 {
-    return (write(1, c, 1));
+    return (write(1, &c , 1));
 }
