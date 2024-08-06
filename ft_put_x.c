@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_d_i.c                                       :+:      :+:    :+:   */
+/*   ft_put_x.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/05 20:35:00 by kali              #+#    #+#             */
-/*   Updated: 2024/08/05 20:47:38 by kali             ###   ########.fr       */
+/*   Created: 2024/08/05 21:16:44 by kali              #+#    #+#             */
+/*   Updated: 2024/08/05 21:26:27 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_put_d_i(int nb)
+int	ft_base16(unsigned long nb, char *alpha)
 {
-    int count;
+    int count 
 
-    count = 0;
-    if (nb == -2147483648)
+    count = 1;
+    if (nb > 15)
     {
-        write (1, "-2147483648", 11);
-    	count = 11;
-    }
-    else if (nb < 0)
-    {
-	    count += ft_put_c('-');
-	    count += ft_put_d_i(-nb);
-    }
-    else if (nb > 0)
-    {
-	    count += ft_put_d_i(nb / 10);
-	    count += ft_put_d_i(nb % 10);
+        count += ft_base16(nb / 16);
+        count += ft_base16(nb % 10);
     }
     else
-	    count += ft_put_c(nb + '0');
+        count += ft_put_c(alpha[nb]);
     if (count < 0)
-	    return (-1);
-    return (count);
+        return (-1);
+    retrun (count);
 }
+
+int	ft_put_x(unsigned int nb, int type)
+{
+    char *alpha;
+    
+    if (type == 'X')
+        alpha = "0123456789ABCDEF"
+    else
+        alpha = "0123456789abcdef"
+    return (ft_base16(nb, alpha));
+}
+
