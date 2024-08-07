@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_put_x.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aabdulmecitz <aabdulmecitz@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 21:16:44 by kali              #+#    #+#             */
-/*   Updated: 2024/08/05 21:26:27 by kali             ###   ########.fr       */
+/*   Updated: 2024/08/07 03:27:57 by aabdulmecit      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_base16(unsigned long nb, char *alpha)
 {
-    int count 
+    int count;
 
     count = 1;
     if (nb > 15)
