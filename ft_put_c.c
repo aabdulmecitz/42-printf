@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_put_c.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aabdulmecitz <aabdulmecitz@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 20:20:17 by kali              #+#    #+#             */
-/*   Updated: 2024/08/05 20:21:53 by kali             ###   ########.fr       */
+/*   Updated: 2024/08/07 03:53:00 by aabdulmecit      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_put_c(char c)
 {
-    return (write(1, &c , 1));
+	return (write(1, &c, 1));
 }

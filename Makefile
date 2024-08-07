@@ -1,45 +1,26 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: kali <kali@student.42.fr>                  +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/07/27 19:39:29 by marvin            #+#    #+#              #
-#    Updated: 2024/08/05 09:20:26 by kali             ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+SRCS	= ft_printf.c ft_check_type.c ft_put_c.c ft_put_d_i.c ft_put_s.c ft_put_u.c ft_put_x.c ft_put_p.c
 
-SRCS = $(shell find . -name ft_*.c)
+OBJS	= ${SRCS:.c=.o}
 
-OBJS = $(SRCS:.c=.o)
+NAME	= libftprintf.a
 
-SRCS = $(shell find . -name 'ft_*.c')
-OBJS = $(SRCS:.c=.o)
-NAME = libftprintf.a
+CC		= gcc
+RM		= rm -f
 
-FLAGS = -Wall -Wextra -Werror
+CFLAGS 	= -Wall -Wextra -Werror
 
-CC = gcc
-RM = rm -f
+all:		${NAME}
 
-all: $(NAME)
-
-# Derleme kuralı
 %.o: %.c
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -o $@ -c $?
 
-# Arşivleme kuralı
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+${NAME}:	${OBJS}
+			ar rcs ${NAME} ${OBJS}
 
-# Temizlik kuralı
-clean:
-	$(RM) $(OBJS)
+clean:  
+			${RM} ${OBJS}
 
-# Temizleme ve yeniden kurulum kuralı
-fclean: clean
-	$(RM) $(NAME)
+fclean:		clean
+			${RM} ${NAME}
 
-# Yeniden kurulum kuralı
-re: fclean all
+re:			fclean all
