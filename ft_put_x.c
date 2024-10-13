@@ -6,7 +6,7 @@
 /*   By: aozkaya <aozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 21:16:44 by kali              #+#    #+#             */
-/*   Updated: 2024/10/13 04:46:01 by aozkaya          ###   ########.fr       */
+/*   Updated: 2024/10/13 05:32:47 by aozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,14 @@ int	ft_put_x(unsigned int nb, int type)
 	return (ft_base16(nb, alpha));
 }
 
-int	ft_base16(unsigned long nb, char *alpha)
+int ft_base16(unsigned long nb, char *alpha)
 {
-	int	count;
+    int count = 0;
+    if (nb >= 16)
+    {
+        count += ft_base16(nb / 16, alpha);
+    }
+    count += ft_put_c(alpha[nb % 16]);
 
-	count = 1;
-	if (nb > 15)
-	{
-		count += ft_base16(nb / 16, alpha);
-		count += ft_base16(nb % 16, alpha);
-	}
-	else
-		count += ft_put_c(alpha[nb]);
-	if (count < 0)
-		return (-1);
-	return (count);
+    return (count);
 }

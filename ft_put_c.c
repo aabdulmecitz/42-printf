@@ -6,7 +6,7 @@
 /*   By: aozkaya <aozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 20:20:17 by kali              #+#    #+#             */
-/*   Updated: 2024/10/13 04:45:44 by aozkaya          ###   ########.fr       */
+/*   Updated: 2024/10/13 07:53:41 by aozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int	ft_put_c(char c)
 {
-	return (write(1, &c, 1));
+	int result = write(1, &c, 1);
+	if (result == -1)
+		return (-1);
+	return (1);
 }

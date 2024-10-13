@@ -6,7 +6,7 @@
 /*   By: aozkaya <aozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 20:05:25 by kali              #+#    #+#             */
-/*   Updated: 2024/10/13 04:45:33 by aozkaya          ###   ########.fr       */
+/*   Updated: 2024/10/13 07:43:31 by aozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_check_type(const char type, va_list args)
 		count += ft_put_u(va_arg(args, unsigned int));
 	if (type == 'p')
 		count += ft_put_p(va_arg(args, void *));
-	if (type == 'x' || type == 'x')
+	if (type == 'X' || type == 'x')
 		count += (char)ft_put_x(va_arg(args, int), type);
 	if (type == '%')
 		return (write(1, "%", 1));

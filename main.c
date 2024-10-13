@@ -3,6 +3,6 @@
 
 int main ()
 {
-    ft_printf("Merhaba %s\n" , "Dunya");
-    printf("Merhaba %s\n" , "Dunya");
+    ft_printf("el-cevap: %X\n" , 234);
+    printf("el-cevap: %X\n" , 234);
 }
