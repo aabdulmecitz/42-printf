@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   old_ft_printf.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aozkaya <aozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 03:48:06 by aabdulmecit       #+#    #+#             */
-/*   Updated: 2024/10/13 05:26:23 by aozkaya          ###   ########.fr       */
+/*   Updated: 2024/10/14 21:55:33 by aozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef OLD_FT_PRINTF_H
+# define OLD_FT_PRINTF_H
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
