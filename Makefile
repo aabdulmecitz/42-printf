@@ -26,7 +26,9 @@ fclean:	clean
 re: fclean all
 
 run: re
-	gcc main.c $(NAME) 
+	@gcc main.c $(NAME) 
+	@make clean
+	@clear
 	./a.out
 
 push:
