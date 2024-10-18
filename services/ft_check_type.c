@@ -6,7 +6,7 @@
 /*   By: aabdulmecitz <aabdulmecitz@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 00:15:00 by aabdulmecit       #+#    #+#             */
-/*   Updated: 2024/10/18 00:36:43 by aabdulmecit      ###   ########.fr       */
+/*   Updated: 2024/10/19 02:15:29 by aabdulmecit      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	ft_check_type(const char type, va_list args)
 	if (type == 's')
 		count += ft_put_s(va_arg(args, char *));
 	if (type == 'p')
-		count += ft_put_c(va_arg(args, int));
-	if (type == 'c')
-		count += (char)ft_put_c(va_arg(args, int));
+		count += ft_put_p(va_arg(args, void *));
+	if (type == 'u')
+		count += ft_put_u(va_arg(args, unsigned int));
 	return (count);
 }

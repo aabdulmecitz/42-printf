@@ -6,6 +6,7 @@ SRCS= 	specifier/ft_put_c.c\
 		specifier/ft_put_u.c\
 		specifier/ft_put_x.c\
 		services/ft_check_type.c\
+		services/ft_base.c\
 		ft_printf.c
 
 FLAGS= -Wall -Wextra -Werror

@@ -6,7 +6,7 @@
 /*   By: aabdulmecitz <aabdulmecitz@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 00:15:15 by aabdulmecit       #+#    #+#             */
-/*   Updated: 2024/10/18 00:43:52 by aabdulmecit      ###   ########.fr       */
+/*   Updated: 2024/10/19 02:17:36 by aabdulmecit      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 int ft_printf(const char *str, ...);
 int ft_check_type(const char type, va_list args);
-int ft_base(unsigned long nb, char *alpha);
+int	ft_base(unsigned long nb, char *alpha);
 int ft_put_c(char c);
 int ft_put_d_i (int nb);
 int ft_put_p(void *arg);
