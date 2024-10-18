@@ -6,7 +6,7 @@
 /*   By: aabdulmecitz <aabdulmecitz@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 00:15:55 by aabdulmecit       #+#    #+#             */
-/*   Updated: 2024/10/19 01:31:13 by aabdulmecit      ###   ########.fr       */
+/*   Updated: 2024/10/19 02:01:02 by aabdulmecit      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_put_x(unsigned int nb, int type)
 
 	if (type == 'X' )
 		alpha = "0123456789ABCDEF";
-	else if (type == 'x')
+	if (type == 'x')
 		alpha = "0123456789abcdef";
 	return (ft_base(nb, alpha));
 }
