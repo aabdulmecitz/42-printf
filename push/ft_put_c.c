@@ -5,12 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aozkaya <aozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 00:15:30 by aabdulmecit       #+#    #+#             */
-/*   Updated: 2024/10/23 14:29:15 by aozkaya          ###   ########.fr       */
+/*   Created: 2024/10/23 19:19:29 by aozkaya           #+#    #+#             */
+/*   Updated: 2024/10/23 19:19:31 by aozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <unistd.h>
 
 int	ft_put_c(char c)
 {

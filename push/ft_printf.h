@@ -5,16 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aozkaya <aozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 00:15:15 by aabdulmecit       #+#    #+#             */
-/*   Updated: 2024/10/23 14:34:30 by aozkaya          ###   ########.fr       */
+/*   Created: 2024/10/23 19:19:21 by aozkaya           #+#    #+#             */
+/*   Updated: 2024/10/23 19:19:24 by aozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <unistd.h>
-# include <stdlib.h>
 # include <stdarg.h>
 
 int	ft_printf(const char *str, ...);

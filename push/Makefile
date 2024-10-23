@@ -1,4 +1,5 @@
 NAME= libftprintf.a
+
 SRCS= 	ft_put_c.c\
 		ft_put_s.c\
 		ft_put_d_i.c\
@@ -10,6 +11,7 @@ SRCS= 	ft_put_c.c\
 		ft_printf.c
 
 FLAGS= -Wall -Wextra -Werror
+
 OBJS= 	ft_put_c.o\
 		ft_put_s.o\
 		ft_put_d_i.o\
