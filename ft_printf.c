@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aabdulmecitz <aabdulmecitz@student.42.f    +#+  +:+       +#+        */
+/*   By: aozkaya <aozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 00:15:10 by aabdulmecit       #+#    #+#             */
-/*   Updated: 2024/10/19 02:05:19 by aabdulmecit      ###   ########.fr       */
+/*   Created: 2024/10/23 19:19:12 by aozkaya           #+#    #+#             */
+/*   Updated: 2024/10/23 19:19:16 by aozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_printf(const char *str, ...)
 {
 	int		i;
 	int		count;
-	va_list args;
+	va_list	args;
 
 	va_start (args, str);
 	count = 0;
