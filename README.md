@@ -1,6 +1,35 @@
-# 42 ft_printf Project
+<div align="center">
 
-![Coding GIF](https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif)
+    # 42 ft_printf Project
+
+    <p align="center">
+        <a href="https://github.com/aabdulmecitz/42-printf" target="_blank">
+            <img align="center" alt="ft_printf" src="https://github.com/mcombeau/mcombeau/blob/main/42_badges/ft_printfm.png">
+        </a>
+    </p>
+
+    [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
+    [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
+    <img src="https://img.shields.io/badge/score-125%20%2F%20100-success?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/circle-2-magenta?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/42-Evaluation-red?style=for-the-badge"/>
+
+    <p align="center">
+        <a href="https://42istanbul.com.tr/" target="_blank">
+            <img src="https://img.shields.io/static/v1?label=&message=Istanbul&color=000&style=for-the-badge&logo=42">
+        </a>
+    </p>
+
+    <p align="center"><strong>ft_printf</strong> — 125/100 :white_check_mark:</p>
+
+    <img src="img/ft_printf_demo.gif" width="700"/>
+
+    *Custom implementation of printf in C*
+
+    *Handles multiple format specifiers and variadic arguments*
+
+</div>
 
 ## About The Project
 
@@ -37,7 +66,7 @@ Here's a breakdown of the project's file structure:
 -   `ft_put_p.c`: Handles the printing of pointer addresses (`%p`).
 -   `ft_base.c`: A utility function for converting numbers to a specified base (used for hexadecimal conversion).
 -   `ft_printf.h`: The header file containing all function prototypes and required includes.
--   `Makefile`: The makefile to compile the source code into a static library.
+-   `Makefile`: The makefile to compile the source code into a static library (`ft_printf.a`).
 
 ## Getting Started
 
@@ -54,14 +83,14 @@ You need `gcc` (GNU Compiler Collection) and `make` installed on your system.
     ```sh
     make
     ```
-    This will generate the static library file `libftprintf.a`.
+    This will generate the static library file `ft_printf.a`.
 
 ## Usage
 
 To use the `ft_printf` function in your own C project:
 
 1.  Include the `ft_printf.h` header file in your source code.
-2.  Compile your project and link it with the `libftprintf.a` library.
+2.  Compile your project and link it with the `ft_printf.a` library.
 
 Here is an example `main.c`:
 
@@ -83,7 +112,7 @@ int main(void)
 }
 ```
 
-To compile this example, place `main.c`, `libftprintf.a`, and `ft_printf.h` in the same directory and run:
+To compile this example, place `main.c`, `ft_printf.a`, and `ft_printf.h` in the same directory and run:
 
 ```sh
 gcc main.c -L. -lftprintf -o my_program
@@ -98,9 +127,9 @@ Then, run your program:
 
 The `Makefile` includes the following rules:
 
--   `all`: (Default) Compiles the source files and creates the `libftprintf.a` static library.
+-   `all`: (Default) Compiles the source files and creates the `ft_printf.a` static library.
 -   `clean`: Removes all the object files (`.o`).
--   `fclean`: Removes the object files and the `libftprintf.a` library.
+-   `fclean`: Removes the object files and the `ft_printf.a` library.
 -   `re`: Re-compiles the library from scratch by running `fclean` and then `all`.
 
 ## Author
